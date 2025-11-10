@@ -9,6 +9,8 @@ httpx<0.28.0
 
 # AWS
 boto3
+fsspec
+s3fs
 
 # Data science
 pandas
