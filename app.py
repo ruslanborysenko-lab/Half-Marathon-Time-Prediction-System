@@ -61,9 +61,9 @@ openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Konfiguracja Digital Ocean Spaces (kompatybilny z S3 API)
 s3 = boto3.client(
     "s3",
-    endpoint_url=os.getenv("SPACES_ENDPOINT", "https://fra1.digitaloceanspaces.com"),  # Frankfurt endpoint
-    aws_access_key_id=os.getenv("SPACES_KEY"),  # DO Spaces Access Key (DO00BZ...)
-    aws_secret_access_key=os.getenv("SPACES_SECRET"),  # DO Spaces Secret Key
+    endpoint_url=os.getenv("AWS_ENDPOINT_URL_S3", "https://fra1.digitaloceanspaces.com"),  # Frankfurt endpoint
+    aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),  # DO Spaces Access Key (DO00BZ...)
+    aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),  # DO Spaces Secret Key
     region_name="fra1"  # Digital Ocean Frankfurt region
 )
 BUCKET_NAME = "pracadomowamodul9"
